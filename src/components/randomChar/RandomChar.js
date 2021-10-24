@@ -47,6 +47,7 @@ class RandomChar extends Component {
             .catch(this.onError);
     }
 
+
     render() {
         const {char, loading, error} = this.state;
         const errorMessage = error ? <ErrorMessage/> : null;
@@ -66,7 +67,7 @@ class RandomChar extends Component {
                     <p className="randomchar__title">
                         Or choose another one
                     </p>
-                    <button className="button button__main">
+                    <button onClick={this.updateChar} className="button button__main">
                         <div className="inner">try it</div>
                     </button>
                     <img src={mjolnir} alt="mjolnir" className="randomchar__decoration"/>
