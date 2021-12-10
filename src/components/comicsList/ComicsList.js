@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -65,7 +66,8 @@ const ComicsList = () => {
 
 
     return (
-        <div className="comics__list">
+        <CSSTransition key={items.id} timeout={500} classNames="comics__list">
+            <div className="comics__list">
             {errorMessage}
             {spinner}
             {items}
@@ -77,6 +79,7 @@ const ComicsList = () => {
             <div className="inner">load more</div>
             </button>
         </div>
+        </CSSTransition>
     )
     }
 export default ComicsList;
