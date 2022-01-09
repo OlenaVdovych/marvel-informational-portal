@@ -1,3 +1,7 @@
+Technologies: HTML, CSS, Java Script, React.js, Node.js, WebPack, Fetch API  (an API of  Marvel.com).
+
+Application uses a database of the Marvel comics, you can choose some character or comic and get the information about it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
